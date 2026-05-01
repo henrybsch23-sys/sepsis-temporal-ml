@@ -1,0 +1,5 @@
+missing_category,n_features
+extreme_missing_90%+,26
+low_missing_<20%,10
+moderate_missing_20_60%,3
+high_missing_60_90%,2

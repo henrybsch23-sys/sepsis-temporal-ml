@@ -1,0 +1,32 @@
+random_state: 42
+
+data:
+  raw_dir_a: "data/raw/challenge-2019/training/training_setA"
+  raw_dir_b: "data/raw/challenge-2019/training/training_setB"
+  max_files_per_cohort: 5000
+
+temporal:
+  observation_window: 12
+  prediction_horizon: 6
+  step_hours: 1
+  min_history: 6
+
+features:
+  missing_threshold: 0.60
+  include_missingness_features: true
+  include_measurement_counts: true
+  include_abnormality_features: true
+
+imbalance:
+  strategy: "class_weight"
+  undersampling_ratio: 10
+
+models:
+  include:
+    - logistic_regression
+    - random_forest
+    - hist_gradient_boosting
+
+evaluation:
+  threshold_metric: "f1"
+  bootstrap_iterations: 500

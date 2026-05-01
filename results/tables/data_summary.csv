@@ -1,0 +1,4 @@
+cohort,n_patients,mean_icu_hours,median_icu_hours,min_icu_hours,max_icu_hours,n_sepsis_patients,sepsis_prevalence
+A,5000,38.9764,38.0,8,336,446,0.0892
+B,5000,37.6972,38.0,8,336,279,0.0558
+Overall,10000,38.3368,38.0,8,336,725,0.0725

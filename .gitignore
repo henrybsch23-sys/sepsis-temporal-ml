@@ -1,8 +1,24 @@
-# Ignore the massive data folder
-physionet.org/
+# Data
+data/raw/
+data/processed/
+*.parquet
 
-# Ignore the virtual environment
+# Models
+models/*.joblib
+models/*.pkl
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv/
 venv/
 
-# Ignore the research papers (optional, keeps repo clean)
-*.pdf
+# System
+.DS_Store
+
+# Logs
+*.log
