@@ -1,0 +1,13 @@
+feature,missing_fraction,clinical_note
+Lactate,0.9728668016109848,"Sepsis/severity marker, but sparse; measurement may reflect clinical suspicion."
+Platelets,0.9407410112476784,Coagulation and organ dysfunction marker.
+Creatinine,0.9394185221510404,Renal function and organ dysfunction marker.
+WBC,0.9359388368356252,Inflammation/infection marker; lab ordering may reflect suspicion.
+FiO2,0.9167014461300892,Respiratory support/oxygen therapy; may reflect workflow and severity.
+Temp,0.6611480353081113,Fever/hypothermia signal; often intermittently measured.
+DBP,0.3157957889025688,Blood pressure component; notable cohort measurement differences.
+Resp,0.1558424281630183,Respiratory distress; relevant in sepsis deterioration.
+SBP,0.1482048579954508,Systolic blood pressure; part of qSOFA blood pressure criterion.
+O2Sat,0.1310933619916112,Dense vital sign; oxygenation and respiratory deterioration.
+MAP,0.1260407754429164,Hemodynamic status; hypotension is clinically important.
+HR,0.1000474739675716,Dense vital sign; tachycardia may reflect physiological stress.

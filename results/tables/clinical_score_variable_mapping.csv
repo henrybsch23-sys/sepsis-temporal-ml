@@ -1,0 +1,11 @@
+clinical_concept,available_variable,planned_feature,limitation
+qSOFA respiratory criterion,Resp,Resp >= 22 count / last / max,"Available, but measurement frequency varies."
+qSOFA systolic blood pressure criterion,SBP,SBP <= 100 count / last / min,"Available, but missingness varies by patient."
+qSOFA altered mental status criterion,Not available,Not included,GCS or mental status is not present in the dataset.
+SOFA cardiovascular component,MAP,MAP < 70 count / min / last,"Vasopressor use is unavailable, so full SOFA cardiovascular scoring is not possible."
+SOFA coagulation component,Platelets,Platelet summary and low platelet indicator,Sparse laboratory variable.
+SOFA liver component,Bilirubin_total / Bilirubin_direct,Bilirubin summary or measured indicator,Extremely sparse; value-based features may be unstable.
+SOFA renal component,Creatinine,Creatinine summary and high creatinine indicator,Urine output is unavailable; only partial renal proxy.
+Respiratory support / oxygenation proxy,"O2Sat, FiO2, SaO2","O2Sat low count, FiO2 measured/count",PaO2 is unavailable; full PaO2/FiO2 SOFA respiratory score is not possible.
+Sepsis severity / hypoperfusion marker,Lactate,"Lactate measured, lactate high if available",Very sparse; measurement may reflect clinical suspicion.
+Inflammation / infection marker,WBC,WBC abnormal count / last / measured,Sparse lab variable; not specific to sepsis.

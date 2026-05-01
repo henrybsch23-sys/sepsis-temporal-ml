@@ -1,5 +1,6 @@
 from pathlib import Path
-from typing import Union
+from typing import Union, Callable
+import pandas as pd
 
 
 PathLike = Union[str, Path]
@@ -58,3 +59,18 @@ def save_figure(fig, path: PathLike, dpi: int = 150) -> None:
     path = Path(path)
     ensure_dir(path.parent)
     fig.savefig(path, dpi=dpi, bbox_inches="tight")
+    
+
+def load_or_create_csv(path, create_fn: Callable[[], pd.DataFrame], force: bool = False):
+    """
+    Load a CSV if it exists, otherwise create it using create_fn and save it.
+    """
+    path = Path(path)
+
+    if path.exists() and not force:
+        return pd.read_csv(path)
+
+    df = create_fn()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(path, index=False)
+    return df
